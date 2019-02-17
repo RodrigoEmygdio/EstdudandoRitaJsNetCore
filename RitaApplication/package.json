@@ -1,0 +1,12 @@
+{
+  "name": "rita-application",
+  "version": "0.0.0",
+  "description": "RitaApplication",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "rita": "^1.3.86"
+  }
+}
