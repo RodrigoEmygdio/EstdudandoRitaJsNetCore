@@ -1,16 +1,27 @@
 'use strict';
 var rita = require('rita');
 
-var rgGramar = new rita.RiGrammar();
 var result;
 
-rgGramar.addRule('<start>', 'The <N> <V>', 1);
-rgGramar.addRule('<N>', 'dog | cat | unicorn');
-rgGramar.addRule('<V>', 'barks | mewos| twllips');
+var gramar = {
+    "<start>": 'Subj V Det N AdjS',
+    "Subj": "Pron",
+    "Pron": "Você",
+    "V": "é",
+    "Det": "uma",
+    "N": "pessoa",
+    "AdjS": "Adj_1 e Adj_2| Adj_1, Adj_2 e Adj_3 ",
+    "Adj_1": "forte",
+    "Adj_2": "determinada",
+    "Adj_3": "autoconfiante"
+};
 
-for (var i = 1; i <= 100; ++i) {
+var rgGramar = new rita.RiGrammar(gramar);
+
     result = rgGramar.expand();
     console.log(result);
-}
+
+
+
 
 
