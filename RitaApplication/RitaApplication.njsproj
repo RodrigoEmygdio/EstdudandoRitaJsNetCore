@@ -11,7 +11,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>22ee639a-2c60-419e-87fe-aece57b5ec20</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>rita_grammar.js</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -28,7 +28,10 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.js" />
+    <Compile Include="app.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="rita_grammar.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
